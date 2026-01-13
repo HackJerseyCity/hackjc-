@@ -1,0 +1,89 @@
+<div class="max-w-2xl w-full space-y-16 py-8">
+  <%# Hero %>
+  <header class="text-center space-y-4">
+    <div class="flex items-center justify-center gap-4 mb-6">
+      <div class="h-px flex-1 bg-slate-400/30"></div>
+      <div class="w-2 h-2 border border-slate-500 rotate-45"></div>
+      <div class="h-px flex-1 bg-slate-400/30"></div>
+    </div>
+    <h1 class="text-5xl sm:text-6xl font-bold tracking-tight text-white">
+      HackJC
+    </h1>
+    <p class="text-lg sm:text-xl text-slate-300 tracking-wide">
+      Civic tech for the 201.
+    </p>
+    <div class="flex items-center justify-center gap-4 mt-6">
+      <div class="h-px flex-1 bg-slate-400/30"></div>
+      <div class="w-2 h-2 border border-slate-500 rotate-45"></div>
+      <div class="h-px flex-1 bg-slate-400/30"></div>
+    </div>
+  </header>
+
+  <%# What we are %>
+  <section class="space-y-4">
+    <div class="flex items-center gap-3">
+      <span class="text-slate-400 text-xs tracking-widest uppercase font-space-mono">01</span>
+      <div class="h-px flex-1 bg-slate-400/30"></div>
+      <h2 class="text-xs uppercase tracking-widest text-slate-400">What we are</h2>
+    </div>
+    <p class="text-slate-300 leading-relaxed pl-8 border-l border-slate-500/30">
+      A casual community of technologists, data nerds, designers, and curious citizens
+      who care about Jersey City. We meet up, hang out, and hack on projects together.
+    </p>
+  </section>
+
+  <%# What we do %>
+  <section class="space-y-4">
+    <div class="flex items-center gap-3">
+      <span class="text-slate-400 text-xs tracking-widest uppercase font-space-mono">02</span>
+      <div class="h-px flex-1 bg-slate-400/30"></div>
+      <h2 class="text-xs uppercase tracking-widest text-slate-400">What we do</h2>
+    </div>
+    <p class="text-slate-300 leading-relaxed pl-8 border-l border-slate-500/30">
+      We host hack nights—low-key sessions where people work on data projects using
+      Jersey City's open data. We build tools that help the community understand and
+      engage with their city.
+    </p>
+    <div class="flex flex-wrap gap-2 pt-2 pl-8">
+      <% %w[transit housing budget public\ safety parks zoning 311\ data].each do |tag| %>
+        <span class="px-3 py-1 text-xs text-slate-300 border border-slate-500/50 rounded tracking-wide font-space-mono">
+          <%= tag %>
+        </span>
+      <% end %>
+    </div>
+  </section>
+
+  <%# Who's welcome %>
+  <section class="space-y-4">
+    <div class="flex items-center gap-3">
+      <span class="text-slate-400 text-xs tracking-widest uppercase font-space-mono">03</span>
+      <div class="h-px flex-1 bg-slate-400/30"></div>
+      <h2 class="text-xs uppercase tracking-widest text-slate-400">Who's welcome</h2>
+    </div>
+    <p class="text-slate-300 leading-relaxed pl-8 border-l border-slate-500/30">
+      Everyone. All skill levels, all backgrounds. You don't need to be a developer—just
+      bring curiosity and an interest in making Jersey City better. Show up, grab a laptop
+      (or don't), and find something interesting to work on.
+    </p>
+  </section>
+
+  <%# Signup %>
+  <section class="border border-slate-500/30 rounded-lg p-8 space-y-4">
+    <div class="flex items-center justify-center gap-3">
+      <div class="h-px flex-1 bg-slate-400/30"></div>
+      <h2 class="text-xs uppercase tracking-widest text-slate-400">Stay in the loop</h2>
+      <div class="h-px flex-1 bg-slate-400/30"></div>
+    </div>
+    <p class="text-slate-300 text-center text-sm">
+      Drop your email. We'll let you know when we're meeting up.
+    </p>
+    <%= render "subscribers/form" %>
+  </section>
+
+  <%# Footer mark %>
+  <footer class="flex items-center justify-center gap-4 pt-8">
+    <div class="h-px w-8 bg-slate-400/30"></div>
+    <div class="w-1.5 h-1.5 border border-slate-500/50 rotate-45"></div>
+    <div class="h-px w-8 bg-slate-400/30"></div>
+  </footer>
+</div>
